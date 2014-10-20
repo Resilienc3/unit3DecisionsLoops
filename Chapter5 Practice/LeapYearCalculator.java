@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 
 /**
  * Write a description of class LeapYearCalculator here.
@@ -8,22 +8,22 @@
  */
 public class LeapYearCalculator
 {
-    
-    /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
-     */
-    public int sampleMethod(int y)
+    public static void main(String[] args)
     {
-        // put your code here
-        return x+y;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Input a year (AD only): ");
+        int year = s.nextInt();
+        int yearMod4 = year%4;
+        int yearMod400 = year%400;
+        int yearMod100 = year%100;
+       
+        if (yearMod4 == 0 && ((yearMod400 == 0) || ((yearMod100 != 0) || year < 1582)))
+        {
+            System.out.println("This is a leap year");
+        }
+        else
+        {
+            System.out.println("This is not a leap year");
+        }
     }
-
 }
