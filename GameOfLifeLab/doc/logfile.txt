@@ -12,7 +12,7 @@ C:\PROGRA~1\Java\JDK17~1.0_6\bin\javadoc.exe
 -source
 1.7
 -classpath
-C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-4.8.2.jar;\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab
+C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-4.8.2.jar;\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\GridWorld\gridworld.jar;\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab
 -d
 \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc
 -encoding
@@ -27,46 +27,11 @@ bluej.doclet.doclets.formats.html.HtmlDoclet
 <---- end of javadoc command ---->
 Loading source file \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java...
 Constructing Javadoc information...
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:1: error: package info.gridworld.actor does not exist
-import info.gridworld.actor.Actor;
-                           ^
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:2: error: package info.gridworld.actor does not exist
-import info.gridworld.actor.ActorWorld;
-                           ^
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:3: error: package info.gridworld.actor does not exist
-import info.gridworld.actor.Rock;
-                           ^
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:4: error: package info.gridworld.grid does not exist
-import info.gridworld.grid.BoundedGrid;
-                          ^
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:5: error: package info.gridworld.grid does not exist
-import info.gridworld.grid.Location;
-                          ^
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:17: error: cannot find symbol
-    private BoundedGrid<Actor> grid;
-            ^
-  symbol:   class BoundedGrid
-  location: class GameOfLife
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:17: error: cannot find symbol
-    private BoundedGrid<Actor> grid;
-                        ^
-  symbol:   class Actor
-  location: class GameOfLife
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:20: error: cannot find symbol
-    private ActorWorld world;
-            ^
-  symbol:   class ActorWorld
-  location: class GameOfLife
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:84: error: cannot find symbol
-    public Actor getActor(int row, int col)
-           ^
-  symbol:   class Actor
-  location: class GameOfLife
 Standard Doclet version 1.7.0_60
 Building tree for all the packages and classes...
 Generating \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\GameOfLife.html...
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:37: warning - @post is an unknown tag.
-\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:84: warning - @pre is an unknown tag.
+\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:38: warning - @post is an unknown tag.
+\\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\GameOfLife.java:126: warning - @pre is an unknown tag.
 Generating \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\package-frame.html...
 Generating \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\package-summary.html...
 Generating \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\constant-values.html...
@@ -76,4 +41,4 @@ Generating \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLif
 Generating \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\allclasses-noframe.html...
 Generating \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\index.html...
 Generating \\NNHSSRV2.hs.sd203.org\JKSmith$\GitHub\unit3DecisionsLoops\GameOfLifeLab\doc\stylesheet.css...
-11 warnings
+2 warnings
