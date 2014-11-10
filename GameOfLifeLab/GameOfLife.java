@@ -107,40 +107,35 @@ public class GameOfLife
      */
     private void createNextGeneration()
     {
-        /** You will need to read the documentation for the World, Grid, and Location classes
-         *      in order to implement the Game of Life algorithm and leverage the GridWorld framework.
-         */
+                 /** You will need to read the documentation for the World, Grid, and Location classes
+                 *   in order to implement the Game of Life algorithm and leverage the GridWorld framework.
+                 */
         
-        // create the grid, of the specified size, that contains Actors
-        Grid<Actor> grid = world.getGrid();
-        
-<<<<<<< HEAD
-        
-        // insert magic here...
-        
-=======
-        for(int count = 0; count <= ROWS; count++)
-        {
-            for(int count2 = 0; count2 <= COLS; count2++)
+                 // create the grid, of the specified size, that contains Actors
+                 Grid<Actor> grid = world.getGrid();        
+                 // insert magic here...
+                 
+            for(int count = 0; count <= ROWS; count++)
             {
-              Location test = new Location(count, count2);
-              Rock alive = new Rock();
-              ArrayList<Location> occ = grid.getOccupiedAdjacentLocations(test);
-              if(occ.size() == 3)
-              {
-                  grid.put(test, alive);
+                for(int count2 = 0; count2 <= COLS; count2++)
+                {
+                    Location test = new Location(count, count2);
+                    Rock alive = new Rock();
+                    ArrayList<Location> occ = grid.getOccupiedAdjacentLocations(test);
+                    if(occ.size() == 3)
+                    {
+                        grid.put(test, alive);
                   
-              }
-              else if(occ.size() == 2)
-              {
+                    }
+                    else if(occ.size() == 2)
+                    {
                   
-              }
-              System.out.println(occ);
+                    }
+                    System.out.println(occ);
               
+                }
+
             }
-        }
->>>>>>> origin/master
-        
     }
     
     /**
@@ -167,7 +162,7 @@ public class GameOfLife
     {
         return ROWS;
     }
-    
+
     /**
      * Returns the number of columns in the game board
      *
@@ -177,8 +172,7 @@ public class GameOfLife
     {
         return COLS;
     }
-    
-    
+ 
     /**
      * Creates an instance of this class. Provides convenient execution.
      *
@@ -188,5 +182,5 @@ public class GameOfLife
         GameOfLife game = new GameOfLife();
         
     }
-
-}
+    
+}                
