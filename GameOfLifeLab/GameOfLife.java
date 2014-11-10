@@ -3,6 +3,7 @@ import info.gridworld.actor.ActorWorld;
 import info.gridworld.actor.Rock;
 import info.gridworld.grid.Grid;
 import info.gridworld.grid.BoundedGrid;
+import java.util.ArrayList;
 import info.gridworld.grid.Location;
 
 /**
@@ -48,6 +49,8 @@ public class GameOfLife
         
         // display the newly constructed and populated world
         world.show();
+        
+        createNextGeneration();
         
     }
     
@@ -111,8 +114,26 @@ public class GameOfLife
         // create the grid, of the specified size, that contains Actors
         Grid<Actor> grid = world.getGrid();
         
-        // insert magic here...
-        
+        for(int count = 0; count <= ROWS; count++)
+        {
+            for(int count2 = 0; count2 <= COLS; count2++)
+            {
+              Location test = new Location(count, count2);
+              Rock alive = new Rock();
+              ArrayList<Location> occ = grid.getOccupiedAdjacentLocations(test);
+              if(occ.size() == 3)
+              {
+                  grid.put(test, alive);
+                  
+              }
+              else if(occ.size() == 2)
+              {
+                  
+              }
+              System.out.println(occ);
+              
+            }
+        }
         
     }
     
@@ -159,6 +180,7 @@ public class GameOfLife
     public static void main(String[] args)
     {
         GameOfLife game = new GameOfLife();
+        
     }
 
 }
