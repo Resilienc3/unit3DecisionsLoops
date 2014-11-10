@@ -3,10 +3,17 @@ dependency1.from=GameOfLifeTest
 dependency1.to=GameOfLife
 dependency1.type=UsesDependency
 objectbench.height=76
+<<<<<<< HEAD
 objectbench.width=647
 package.editor.height=556
 package.editor.width=549
 package.editor.x=3
+=======
+objectbench.width=804
+package.editor.height=838
+package.editor.width=706
+package.editor.x=840
+>>>>>>> origin/master
 package.editor.y=0
 package.numDependencies=1
 package.numTargets=2
