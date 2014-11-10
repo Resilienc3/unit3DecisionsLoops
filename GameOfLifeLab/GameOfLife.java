@@ -111,6 +111,7 @@ public class GameOfLife
         // create the grid, of the specified size, that contains Actors
         Grid<Actor> grid = world.getGrid();
         
+        
         // insert magic here...
         
         
