@@ -119,7 +119,7 @@ public class GameOfLife
                  // create the grid, of the specified size, that contains Actors
                  Grid<Actor> grid = world.getGrid();        
                  // insert magic here...
-                 
+                 BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(ROWS, COLS);
             for(int count = 0; count < ROWS; count++)
             {
                 for(int count2 = 0; count2 < COLS; count2++)
@@ -127,24 +127,26 @@ public class GameOfLife
                     Location testLoc = new Location(count, count2);
                     Rock alive = new Rock();
                     ArrayList<Location> occ = grid.getOccupiedAdjacentLocations(testLoc);
+                    
                     if(occ.size() == 3)
                     {
-                        grid.put(testLoc, alive);
+                        newGrid.put(testLoc, alive);
                   
                     }
                     else if(occ.size() == 2 && grid.get(testLoc) != null)
                     {
-                        
+                        newGrid.put(testLoc, alive);
                     }
-                    else
-                    {
-                        grid.remove(testLoc);
-                    }
+                  
                     System.out.println(occ);
-                    Thread.sleep(2000);
+                    Thread.sleep(500);
+                    
+                    
                 }
-
+                    
             }
+            world.setGrid(newGrid);
+            world.show();
     }
     
     /**

@@ -42,6 +42,7 @@ public class GameOfLifeTest
 
     @Test
     public void testInitialState()
+                throws InterruptedException
     {
         /* expected pattern for initial state
          *  (X: alive; -: dead)
@@ -86,6 +87,7 @@ public class GameOfLifeTest
     }
     
     @Test public void testFinalState()
+            throws InterruptedException
     /*
      * After 5 generations
      */
