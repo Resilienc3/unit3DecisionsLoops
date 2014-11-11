@@ -37,6 +37,7 @@ public class GameOfLife
      * 
      */
     public GameOfLife()
+    throws InterruptedException
     {
         // create the grid, of the specified size, that contains Actors
         BoundedGrid<Actor> grid = new BoundedGrid<Actor>(ROWS, COLS);
@@ -50,8 +51,11 @@ public class GameOfLife
         // display the newly constructed and populated world
         world.show();
         
-        createNextGeneration();
-        
+        for( int count = 1; count <= 5; count++)
+        {
+            createNextGeneration();
+            Thread.sleep(1000);
+        }
     }
     
     /**
@@ -106,6 +110,7 @@ public class GameOfLife
      * 
      */
     private void createNextGeneration()
+    throws InterruptedException
     {
                  /** You will need to read the documentation for the World, Grid, and Location classes
                  *   in order to implement the Game of Life algorithm and leverage the GridWorld framework.
@@ -115,24 +120,28 @@ public class GameOfLife
                  Grid<Actor> grid = world.getGrid();        
                  // insert magic here...
                  
-            for(int count = 0; count <= ROWS; count++)
+            for(int count = 0; count < ROWS; count++)
             {
-                for(int count2 = 0; count2 <= COLS; count2++)
+                for(int count2 = 0; count2 < COLS; count2++)
                 {
-                    Location test = new Location(count, count2);
+                    Location testLoc = new Location(count, count2);
                     Rock alive = new Rock();
-                    ArrayList<Location> occ = grid.getOccupiedAdjacentLocations(test);
+                    ArrayList<Location> occ = grid.getOccupiedAdjacentLocations(testLoc);
                     if(occ.size() == 3)
                     {
-                        grid.put(test, alive);
+                        grid.put(testLoc, alive);
                   
                     }
-                    else if(occ.size() == 2)
+                    else if(occ.size() == 2 && grid.get(testLoc) != null)
                     {
-                  
+                        
+                    }
+                    else
+                    {
+                        grid.remove(testLoc);
                     }
                     System.out.println(occ);
-              
+                    Thread.sleep(2000);
                 }
 
             }
@@ -178,6 +187,7 @@ public class GameOfLife
      *
      */
     public static void main(String[] args)
+                throws InterruptedException
     {
         GameOfLife game = new GameOfLife();
         
