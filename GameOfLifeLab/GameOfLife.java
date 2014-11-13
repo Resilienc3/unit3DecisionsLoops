@@ -17,6 +17,7 @@ public class GameOfLife
 {
     // the world comprised of the grid that displays the graphics for the game
     private ActorWorld world;
+    private ActorWorld world2;
     
     // the game board will have 5 rows and 5 columns
     private final int ROWS = 5;
@@ -53,8 +54,8 @@ public class GameOfLife
         
         for( int count = 1; count <= 5; count++)
         {
-            createNextGeneration();
-            Thread.sleep(1000);
+            world.setGrid(createNextGeneration());
+            Thread.sleep(500);
         }
     }
     
@@ -109,7 +110,7 @@ public class GameOfLife
      * @post    the world has been populated with a new grid containing the next generation
      * 
      */
-    private void createNextGeneration()
+    private Grid createNextGeneration()
     throws InterruptedException
     {
                  /** You will need to read the documentation for the World, Grid, and Location classes
@@ -119,10 +120,12 @@ public class GameOfLife
                  // create the grid, of the specified size, that contains Actors
                  Grid<Actor> grid = world.getGrid();        
                  // insert magic here...
+                 
                  BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(ROWS, COLS);
+                 world2 = new ActorWorld(newGrid);
             for(int count = 0; count < ROWS; count++)
             {
-                for(int count2 = 0; count2 < COLS; count2++)
+                for(int count2 = 0; count2 < COLS; count2++)  
                 {
                     Location testLoc = new Location(count, count2);
                     Rock alive = new Rock();
@@ -139,14 +142,18 @@ public class GameOfLife
                     }
                   
                     System.out.println(occ);
-                    Thread.sleep(500);
+                    Thread.sleep(100);
                     
                     
                 }
                     
             }
-            world.setGrid(newGrid);
+            grid = world2.getGrid();
+            world = world2;
             world.show();
+            
+            return grid;
+            
     }
     
     /**
