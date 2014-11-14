@@ -52,8 +52,7 @@ public class GameOfLife
         // display the newly constructed and populated world
         world.show();
         
-        BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(ROWS, COLS);
-        world2 = new ActorWorld(newGrid);
+        
         
     }
     
@@ -117,9 +116,10 @@ public class GameOfLife
         
                  // create the grid, of the specified size, that contains Actors
                  Grid<Actor> grid = world.getGrid(); 
-                 Grid<Actor> newGrid = world2.getGrid();
+               
                  // insert magic here...
-                 
+                 BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(ROWS, COLS);
+        
                  
             for(int count = 0; count < ROWS; count++)
             {
@@ -198,8 +198,7 @@ public class GameOfLife
         for( int count = 1; count < 5; count++)
         {
             game.createNextGeneration();
-            game.world.setGrid(game.world2.getGrid());
-            game.world.show();
+            //game.world.show();
             Thread.sleep(500);
         }
         
