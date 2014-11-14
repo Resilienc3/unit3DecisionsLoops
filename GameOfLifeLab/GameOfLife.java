@@ -140,7 +140,7 @@ public class GameOfLife
                     }
                   
                     System.out.println(occ);
-                    Thread.sleep(100);
+                    //Thread.sleep(5);
                     
                     
                 }
@@ -199,7 +199,7 @@ public class GameOfLife
         {
             game.createNextGeneration();
             //game.world.show();
-            Thread.sleep(500);
+            Thread.sleep(1000);
         }
         
     }
