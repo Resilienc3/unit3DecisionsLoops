@@ -52,11 +52,9 @@ public class GameOfLife
         // display the newly constructed and populated world
         world.show();
         
-        for( int count = 1; count <= 5; count++)
-        {
-            world.setGrid(createNextGeneration());
-            Thread.sleep(500);
-        }
+        BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(ROWS, COLS);
+        world2 = new ActorWorld(newGrid);
+        
     }
     
     /**
@@ -110,7 +108,7 @@ public class GameOfLife
      * @post    the world has been populated with a new grid containing the next generation
      * 
      */
-    private Grid createNextGeneration()
+    private void createNextGeneration()
     throws InterruptedException
     {
                  /** You will need to read the documentation for the World, Grid, and Location classes
@@ -118,11 +116,11 @@ public class GameOfLife
                  */
         
                  // create the grid, of the specified size, that contains Actors
-                 Grid<Actor> grid = world.getGrid();        
+                 Grid<Actor> grid = world.getGrid(); 
+                 Grid<Actor> newGrid = world2.getGrid();
                  // insert magic here...
                  
-                 BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(ROWS, COLS);
-                 world2 = new ActorWorld(newGrid);
+                 
             for(int count = 0; count < ROWS; count++)
             {
                 for(int count2 = 0; count2 < COLS; count2++)  
@@ -148,11 +146,9 @@ public class GameOfLife
                 }
                     
             }
-            grid = world2.getGrid();
-            world = world2;
-            world.show();
+            world.setGrid(newGrid);
             
-            return grid;
+            
             
     }
     
@@ -199,6 +195,13 @@ public class GameOfLife
                 throws InterruptedException
     {
         GameOfLife game = new GameOfLife();
+        for( int count = 1; count < 5; count++)
+        {
+            game.createNextGeneration();
+            game.world.setGrid(game.world2.getGrid());
+            game.world.show();
+            Thread.sleep(500);
+        }
         
     }
     
