@@ -140,8 +140,7 @@ public class GameOfLife
                   
                     System.out.println(occ);
 
-                    
-                    
+                    Thread.sleep(100);
                 }
                     
             }
@@ -197,7 +196,7 @@ public class GameOfLife
         for( int count = 1; count < 5; count++)
         {
             game.createNextGeneration();
-
+            Thread.sleep(1000);
         }
         
     }
