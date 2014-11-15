@@ -140,7 +140,7 @@ public class GameOfLife
                     }
                   
                     System.out.println(occ);
-                    
+                    //Thread.sleep(5);
                     
                     
                 }
@@ -197,16 +197,11 @@ public class GameOfLife
         GameOfLife game = new GameOfLife();
         for( int count = 1; count < 5; count++)
         {
-            game.getNewGrid();
+            game.createNextGeneration();
+            //game.world.show();
             Thread.sleep(1000);
         }
         
-    }
-    
-    public void getNewGrid()
-    throws InterruptedException
-    {
-        this.createNextGeneration();
     }
     
 }                

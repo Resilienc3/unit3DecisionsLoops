@@ -59,11 +59,6 @@ public class GameOfLifeTest
         GameOfLife game = new GameOfLife();
         final int ROWS = 5;
         final int COLS = 5;
-        
-        for( int i = 1; i <= 5; i++)
-        {
-            game.main();
-        }
 
         for(int row = 0; row < ROWS; row++)
         {
@@ -112,9 +107,9 @@ public class GameOfLifeTest
         GameOfLife game = new GameOfLife();
         final int ROWS = 5;
         final int COLS = 5;
-        for(int i = 1; i <= 5; i++)
+        for (int i = 1; i <= 5; i++)
         {
-            game.main();
+            game.createNextGeneration();
         }
         
         for(int row = 0; row < ROWS; row++)
