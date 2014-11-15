@@ -17,7 +17,6 @@ public class GameOfLife
 {
     // the world comprised of the grid that displays the graphics for the game
     private ActorWorld world;
-    private ActorWorld world2;
     
     // the game board will have 5 rows and 5 columns
     private final int ROWS = 5;
@@ -140,7 +139,7 @@ public class GameOfLife
                     }
                   
                     System.out.println(occ);
-                    //Thread.sleep(5);
+                    Thread.sleep(5);
                     
                     
                 }
@@ -198,7 +197,6 @@ public class GameOfLife
         for( int count = 1; count < 5; count++)
         {
             game.createNextGeneration();
-            //game.world.show();
             Thread.sleep(1000);
         }
         
