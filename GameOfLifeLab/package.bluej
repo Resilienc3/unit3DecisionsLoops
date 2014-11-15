@@ -3,9 +3,9 @@ dependency1.from=GameOfLifeTest
 dependency1.to=GameOfLife
 dependency1.type=UsesDependency
 objectbench.height=76
-objectbench.width=646
+objectbench.width=647
 package.editor.height=556
-package.editor.width=548
+package.editor.width=549
 package.editor.x=683
 package.editor.y=0
 package.numDependencies=1
@@ -31,10 +31,17 @@ target1.typeParameters=
 target1.width=100
 target1.x=70
 target1.y=130
+<<<<<<< HEAD
 target2.editor.height=728
 target2.editor.width=683
 target2.editor.x=683
 target2.editor.y=0
+=======
+target2.editor.height=788
+target2.editor.width=1386
+target2.editor.x=-8
+target2.editor.y=-8
+>>>>>>> parent of 1352412... Fix the Unit Test
 target2.height=50
 target2.name=GameOfLifeTest
 target2.naviview.expanded=true
