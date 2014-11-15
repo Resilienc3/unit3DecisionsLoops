@@ -41,6 +41,9 @@ target2.editor.height=788
 target2.editor.width=1386
 target2.editor.x=-8
 target2.editor.y=-8
+<<<<<<< HEAD
+>>>>>>> parent of 1352412... Fix the Unit Test
+=======
 >>>>>>> parent of 1352412... Fix the Unit Test
 target2.height=50
 target2.name=GameOfLifeTest

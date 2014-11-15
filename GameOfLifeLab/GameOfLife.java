@@ -140,7 +140,11 @@ public class GameOfLife
                   
                     System.out.println(occ);
 <<<<<<< HEAD
+<<<<<<< HEAD
                     Thread.sleep(5);
+=======
+                    Thread.sleep(100);
+>>>>>>> parent of 1352412... Fix the Unit Test
 =======
                     Thread.sleep(100);
 >>>>>>> parent of 1352412... Fix the Unit Test
@@ -202,7 +206,12 @@ public class GameOfLife
         {
             game.createNextGeneration();
 <<<<<<< HEAD
+<<<<<<< HEAD
             Thread.sleep(1000);
+=======
+            //game.world.show();
+            Thread.sleep(500);
+>>>>>>> parent of 1352412... Fix the Unit Test
 =======
             //game.world.show();
             Thread.sleep(500);
