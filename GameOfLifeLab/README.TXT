@@ -30,13 +30,13 @@ The universe of the Game of Life is an infinite two-dimensional orthogonal
     moment at which this happens is sometimes called a tick (in other words,
     each generation is a pure function of the preceding one). The rules
     continue to be applied repeatedly to create further generations.
-* Grid is 8 x 8
+* Grid is 20 x 20
 * Dead cells are empty
-* Live cells have black dot in them
+* Live cells have black "rock" in them
 * Runs a user inputed amount of times
-* 3 patterns, user selects one
+* Random Pattern
 * Half a second delay between generations
-* Edges are instantaneous kill
+* Edges are bounded
 
 Nonfunctional Requirements:
 

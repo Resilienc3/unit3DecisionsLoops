@@ -107,7 +107,10 @@ public class GameOfLifeTest
         GameOfLife game = new GameOfLife();
         final int ROWS = 5;
         final int COLS = 5;
-       
+        for(int i = 1; i<=5; i++)
+        {
+            game.showNextGen();
+        }
 
         
         for(int row = 0; row < ROWS; row++)
