@@ -35,7 +35,9 @@ The universe of the Game of Life is an infinite two-dimensional orthogonal
 * Live cells have black "rock" in them
 * Runs a user inputed amount of times
 * Random Pattern
-* Half a second delay between generations
+* Contains a continue
+* Displays Generation and Number of Alive cells
+* Fifth of a second delay between generations
 * Edges are bounded
 
 Nonfunctional Requirements:
