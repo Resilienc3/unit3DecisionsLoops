@@ -134,6 +134,7 @@ public class GameOfLife
         BoundedGrid<Actor> newGrid = new BoundedGrid<Actor>(ROWS, COLS);
         
         live = 0;
+        //Goes through grid and adds all cells that will be alive in next generation to newGrid
         for(int count = 0; count < ROWS; count++)
         {
             for(int count2 = 0; count2 < COLS; count2++)  
@@ -160,6 +161,7 @@ public class GameOfLife
         }
         
         ArrayList<Location> occLocs = newGrid.getOccupiedLocations();
+        //.setGrid() didn't work so this updates the grid by comparing it to newGrid
         for(int i = 0; i < ROWS; i++)
         {
             for(int j = 0; j < COLS; j++)
